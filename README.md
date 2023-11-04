@@ -15,20 +15,20 @@ You must include the `NSServices` entry in your app's info.plist.
 If you're using [Electron Forge](https://github.com/electron/forge), you can set this in your `forge.config.js` file:
 
     module.exports = {
-    	packagerConfig: {
-    		extendInfo: {
-    			NSServices: [
-    				{
-    					NSSendTypes: ["NSStringPboardType"],
-    					NSMessage: "handleTextDropOnDock", // this value must be exact
-    					NSMenuItem: {
-    						default: "Open in Drop Text Demo", // edit this for your app
-    					},
-    				},
-    			],
-    		},
-    	},
-    	...
+        packagerConfig: {
+            extendInfo: {
+                NSServices: [
+                    {
+                        NSSendTypes: ["NSStringPboardType"],
+                        NSMessage: "handleTextDropOnDock", // this value must be exact
+                        NSMenuItem: {
+                            default: "Open in Drop Text Demo", // edit this for your app
+                        },
+                    },
+                ],
+            },
+        },
+        ...
     };
 
 ## API
@@ -46,14 +46,14 @@ In main process:
     const dropText = require("electron-drop-text-on-dock");
 
     function createWindow() {
-    	const mainWindow = new BrowserWindow({
-    		height: 500,
-    		width: 800,
-    	});
-    	dropText.onDropText((text) => {
-    		console.log("text dropped:", text);
-    	});
-    	mainWindow.webContents.loadFile("index.html");
+        const mainWindow = new BrowserWindow({
+            height: 500,
+            width: 800,
+        });
+        dropText.onDropText((text) => {
+            console.log("text dropped:", text);
+        });
+        mainWindow.webContents.loadFile("index.html");
     }
 
     app.whenReady().then(() => createWindow());
