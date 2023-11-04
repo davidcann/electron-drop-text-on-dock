@@ -8,7 +8,7 @@
 
     npm install electron-drop-text-on-dock
 
-## info.plist Requirement
+### info.plist Requirement
 
 You must include the `NSServices` entry in your app's info.plist.
 
@@ -43,9 +43,9 @@ If you're using [Electron Forge](https://github.com/electron/forge), you can set
 In main process:
 
     const { BrowserWindow } = require("electron");
-    const dropText = require("electron-drop-text-on-dock");
+    const { onDropText } = require("electron-drop-text-on-dock");
 
-    dropText.onDropText((text) => {
+    onDropText((text) => {
         console.log("text dropped:", text);
     });
 
