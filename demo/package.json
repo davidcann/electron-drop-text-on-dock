@@ -1,0 +1,38 @@
+{
+	"name": "demo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"preelectron-pack": "yarn run build",
+		"electron-pack": "npm run electron-build && electron-builder -mwl",
+		"postinstall": "electron-rebuild",
+		"package": "electron-forge package",
+		"make": "electron-forge make"
+	},
+	"author": "David Cann <david@davidcann.com> (https://davidcann.com)",
+	"license": "MIT",
+	"devDependencies": {
+		"@electron-forge/cli": "^6.4.2",
+		"@electron-forge/maker-zip": "^6.4.2",
+		"@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+		"electron": "^26.0.0"
+	},
+	"type": "commonjs",
+	"build": {
+		"productName": "Demo",
+		"asar": true,
+		"files": [
+			"build/**/*",
+			"static/**/*"
+		],
+		"win": {},
+		"linux": {},
+		"mac": {}
+	},
+	"dependencies": {
+		"electron-drop-text-on-dock": "file:..",
+		"electron-squirrel-startup": "^1.0.0"
+	}
+}

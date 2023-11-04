@@ -1,0 +1,31 @@
+{
+	"name": "electron-drop-text-on-dock",
+	"version": "1.0.0",
+	"description": "Detect dropped text on the app's dock icon in Electron on macOS",
+	"main": "main.js",
+	"types": "types.d.ts",
+	"author": "David Cann <david@davidcann.com> (https://davidcann.com)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/davidcann/electron-drop-text-on-dock.git"
+	},
+	"keywords": [
+		"electron",
+		"electronjs",
+		"drag-and-drop",
+		"dock",
+		"macos",
+		"mac"
+	],
+	"bugs": {
+		"url": "https://github.com/davidcann/electron-drop-text-on-dock/issues"
+	},
+	"homepage": "https://github.com/davidcann/electron-drop-text-on-dock#readme",
+	"dependencies": {
+		"bindings": "^1.5.0",
+		"node-addon-api": "^7.0.0"
+	},
+	"gypfile": true,
+	"type": "commonjs"
+}

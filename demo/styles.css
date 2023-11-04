@@ -1,0 +1,8 @@
+body {
+	background-color: none;
+	color: black;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-size: 12px;
+	padding: 20px;
+	user-select: none;
+}
