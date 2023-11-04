@@ -45,13 +45,14 @@ In main process:
     const { BrowserWindow } = require("electron");
     const dropText = require("electron-drop-text-on-dock");
 
+    dropText.onDropText((text) => {
+        console.log("text dropped:", text);
+    });
+
     function createWindow() {
         const mainWindow = new BrowserWindow({
             height: 500,
             width: 800,
-        });
-        dropText.onDropText((text) => {
-            console.log("text dropped:", text);
         });
         mainWindow.webContents.loadFile("index.html");
     }
