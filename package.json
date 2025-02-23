@@ -1,6 +1,6 @@
 {
 	"name": "electron-drop-text-on-dock",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Detect dropped text on the app's dock icon in Electron on macOS",
 	"main": "main.js",
 	"types": "types.d.ts",
