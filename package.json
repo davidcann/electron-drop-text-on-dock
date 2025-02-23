@@ -22,9 +22,11 @@
 		"url": "https://github.com/davidcann/electron-drop-text-on-dock/issues"
 	},
 	"homepage": "https://github.com/davidcann/electron-drop-text-on-dock#readme",
-	"dependencies": {
-		"bindings": "^1.5.0",
+	"devDependencies": {
 		"node-addon-api": "^7.0.0"
+	},
+	"dependencies": {
+		"bindings": "^1.5.0"
 	},
 	"gypfile": true,
 	"type": "commonjs"
